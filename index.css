@@ -3,22 +3,37 @@
 	list-style-position: inside;
 }
 
-:root{
-	--width:400px;
+:root {
+	--width: 400px;
+	--bg: rgb(255, 255, 255, 0.3);
 }
 
 body {
-	font-family: ms pgothic;
+	font-family: ds, ms pgothic;
+	word-spacing: 4px;
+	font-size: 18px;
 	margin: 0px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	background: url(files/grid-purple.png);
+	background-size: 10px;
 }
-header{
-	height:100px;
-	border:1px solid black;
-	max-width:var(--width);
-	margin:auto;
+
+a {
+	color: purple;
 }
+
+a:hover {
+	color: blue;
+}
+
+h1 {
+	margin: 0px;
+	text-align: center;
+}
+
 main {
-	max-width:var(--width);
+	max-width: var(--width);
 	margin: 10px;
 	padding: 15px;
 	margin: auto;
@@ -27,4 +42,20 @@ main {
 nav a {
 	display: block;
 	text-decoration: none;
+	text-align: center;
+}
+
+footer {
+	margin: auto;
+	max-width: var(--width);
+	text-align: center;
+}
+
+footer p {
+	margin: 5px;
+}
+
+@font-face {
+	font-family: ds;
+	src: url(files/ds.ttf);
 }
