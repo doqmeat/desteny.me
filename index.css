@@ -5,26 +5,27 @@
 
 :root {
 	--width: 400px;
-	--bg: rgb(255, 255, 255, 0.3);
+	--bg: rgb(255, 255, 255, 0.7);
 }
 
 body {
 	font-family: ds, ms pgothic;
 	word-spacing: 4px;
-	font-size: 18px;
+	font-size: 21px;
 	margin: 0px;
 	margin-top: 20px;
 	margin-bottom: 30px;
-	background: url(files/grid-purple.png);
-	background-size: 10px;
+	background: url(files/bg.gif);
 }
 
 a {
-	color: purple;
+	color: #e29c94;
+	text-shadow: 1px 1px 1px black;
+	text-decoration: none;
 }
 
 a:hover {
-	color: blue;
+	color: lightyellow;
 }
 
 h1 {
@@ -33,16 +34,18 @@ h1 {
 }
 
 main {
+	background: var(--bg);
 	max-width: var(--width);
 	margin: 10px;
 	padding: 15px;
 	margin: auto;
+	border-radius: 20px;
+	border: 2px dashed #e29c94;
 }
 
 nav a {
 	display: block;
 	text-decoration: none;
-	text-align: center;
 }
 
 footer {
@@ -53,6 +56,12 @@ footer {
 
 footer p {
 	margin: 5px;
+}
+
+@media only screen and (max-width:700px) {
+	body {
+		margin: 15px;
+	}
 }
 
 @font-face {
