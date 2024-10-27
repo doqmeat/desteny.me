@@ -97,7 +97,7 @@ a:hover {
   z-index: 1;
   margin-top: 0px;
   width: var(--long);
-  height: var(--wide2);
+  min-height: var(--wide2);
   border-radius: 20px;
   overflow: hidden;
   border: 2px solid var(--accent-color);
@@ -123,7 +123,7 @@ a:hover {
 .up {
   padding: 30px;
   display: block;
-  height: var(--wide);
+  min-height: var(--wide);
   border-bottom: 2px dashed grey;
   overflow: auto;
 }
@@ -131,7 +131,7 @@ a:hover {
 .down {
   padding: 30px;
   display: block;
-  height: var(--wide);
+  min-height: var(--wide);
   overflow: auto;
 }
 
