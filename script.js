@@ -34,6 +34,8 @@ function passportPage1() {
   btn2.onclick = passportPage2;
   btn2.innerText = "next page";
   passport.style.display = "none";
+  btn3.innerText = "next page";
+  btn3.onclick = passportPage2;
 }
 
 function passportPage2() {
