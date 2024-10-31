@@ -24,6 +24,7 @@ body {
   margin: 0px;
   font-family: ms pgothic, arial;
   font-size: 16px;
+  margin-bottom: 50px;
 }
 
 ::selection {
@@ -145,8 +146,7 @@ a:hover {
   margin-bottom: 10px;
 }
 
-button.navBtns,
-button.moBtns {
+button.navBtns {
   display: none;
   margin: 4px;
   background: var(--accent-color);
@@ -156,8 +156,7 @@ button.moBtns {
   border: 2px inset var(--accent-color);
 }
 
-button.navBtns:hover,
-button.moBtns:hover {
+button.navBtns:hover {
   background: black;
   color: var(--accent-color);
   border: 2px outset var(--accent-color);
@@ -397,22 +396,16 @@ button.moBtns:hover {
     left: auto;
     position: relative;
     z-index: 1;
-    width: 92%;
+    width: 90%;
     height: auto;
     min-height: auto;
     margin: 20px;
   }
 
-  #page-2 {
+  #cover,
+  #buttons,
+  .footer {
     display: none;
-  }
-
-  #cover {
-    display: none;
-  }
-
-  button.moBtns {
-    display: inline-block;
   }
 
   #page-1 .down {
