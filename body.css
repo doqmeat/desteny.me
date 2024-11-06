@@ -24,7 +24,6 @@ body {
   margin: 0px;
   font-family: ms pgothic, arial;
   font-size: 16px;
-  margin-bottom: 50px;
 }
 
 ::selection {
@@ -121,6 +120,12 @@ a:hover {
   font-weight: bold;
 }
 
+#page-2 .up {
+  min-height: auto;
+  height: 480px;
+  overflow: hidden;
+}
+
 .up {
   padding: 30px;
   display: block;
@@ -146,7 +151,8 @@ a:hover {
   margin-bottom: 10px;
 }
 
-button.navBtns {
+button.navBtns,
+button.moBtns {
   display: none;
   margin: 4px;
   background: var(--accent-color);
@@ -156,7 +162,8 @@ button.navBtns {
   border: 2px inset var(--accent-color);
 }
 
-button.navBtns:hover {
+button.navBtns:hover,
+button.moBtns:hover {
   background: black;
   color: var(--accent-color);
   border: 2px outset var(--accent-color);
@@ -396,16 +403,22 @@ button.navBtns:hover {
     left: auto;
     position: relative;
     z-index: 1;
-    width: 90%;
+    width: 88%;
     height: auto;
     min-height: auto;
     margin: 20px;
   }
 
-  #cover,
-  #buttons,
-  .footer {
+  #page-2 {
     display: none;
+  }
+
+  #cover {
+    display: none;
+  }
+
+  button.moBtns {
+    display: inline-block;
   }
 
   #page-1 .down {
@@ -414,6 +427,10 @@ button.navBtns:hover {
       "img img img"
       "info1 info2 info2"
       "footer footer footer";
+  }
+
+  #page-2 .up {
+    height: auto;
   }
 }
 
