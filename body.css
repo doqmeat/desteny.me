@@ -387,6 +387,11 @@ button.moBtns:hover {
   width: 200px;
 }
 
+iframe {
+  width: 100%;
+  height: 430px;
+}
+
 @media only screen and (max-width: 920px) {
   :root {
     --left: 170px;
@@ -396,6 +401,11 @@ button.moBtns:hover {
 @media only screen and (max-width: 600px) {
   .hide {
     display: block;
+  }
+
+  iframe {
+    width: 100%;
+    height: 480px;
   }
 
   #passport-opened {
@@ -430,7 +440,7 @@ button.moBtns:hover {
   }
 
   #page-2 .up {
-    height: auto;
+    height: 350px;
   }
 }
 
