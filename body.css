@@ -4,7 +4,7 @@
 
 :root {
   --white: #dbecff;
-  --accent-color: #ad78d3;
+  --accent-color: #de6caa;
   --long: 560px;
   --wide: 420px;
   --wide2: 840px;
@@ -78,7 +78,7 @@ a:hover {
   position: absolute;
   width: var(--wide);
   height: var(--long);
-  background: #7998b9;
+  background: #e4ce7e;
   z-index: 2;
   cursor: grab;
   box-shadow: 2px 2px 1px white;
@@ -123,7 +123,6 @@ a:hover {
 #page-2 .up {
   min-height: auto;
   height: 480px;
-  overflow: hidden;
 }
 
 .up {
@@ -139,6 +138,12 @@ a:hover {
   display: block;
   min-height: var(--wide);
   overflow: auto;
+}
+
+figure {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
 }
 
 /*navigation buttons that pop up when you open (click) on the passport*/
@@ -241,6 +246,13 @@ button.moBtns:hover {
   text-align: center;
   overflow: hidden;
   color: var(--accent-color);
+}
+
+/* status cafe */
+
+#statuscafe {
+  font-size: 13px;
+  text-transform: none;
 }
 
 /*this is the tooltip aka the title pop up*/
@@ -437,10 +449,6 @@ iframe {
       "img img img"
       "info1 info2 info2"
       "footer footer footer";
-  }
-
-  #page-2 .up {
-    height: 350px;
   }
 }
 
