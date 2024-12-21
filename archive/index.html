@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- coded with love by des / started working on this since 25.oct.24 -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--	favicon / tab img -->
+	<link rel="icon" type="image/x-icon" href="files/favicon.gif">
+	<title>des.doqmeat.com</title>
+	<link href="body.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="files/tooltip-jquary.js"></script>
+	<script src="files/tooltip.js"></script>
+	<!--	end of tooltips -->
+</head>
+
+<body>
+
+	<center><button id="moBtn" class="moBtns hide" onclick="passportPage2()">next page</button></center>
+
+	<div id="buttons">
+		<!--	the navigation buttons -->
+		<button id="beforeBtn" class="navBtns">button 1</button>
+
+		<button id="afterBtn" class="navBtns">button 2</button>
+	</div>
+
+	<!-- passport cover -->
+	<div title="click to open!" id="cover" onclick="passportOpen()">
+		<h1>passport</h1>
+		<img src="files/passport-cover.png" alt="passport cover">
+	</div>
+
+	<!--	opened passport -->
+	<div id="passport-opened">
+		<!--	page one -->
+		<div id="page-1" class="page">
+			<!--		top half -->
+			<div class="up">
+				<h2>(～￣▽￣)～</h2>
+
+				<h3>projects</h3>
+				<li>my home sweet home on the internet → <a href="https://doqmeat.com">doqmeat.com</a></li>
+				<li><a href="https://siinamota.doqmeat.com">siinamota fansite</a> / archived <a href="https://sepiarecord.notion.site/homepage-6242b9a7ce844610bdf2a9187a0a1bfb" target="_blank">version</a> on notion</li>
+				<li>free to use <a href="https://doqmeat.com/notebook/F2U/codes">HTML templates</a></li>
+
+				<h3>on the web</h3>
+				<a href="https://github.com/doqmeat">github</a> ☆
+				<a href="https://x.com/sepiarecord999">twitter</a> ☆
+				<a href="https://doqmeats.tumblr.com/">tumblr</a> / <a href="https://sepiarecord999.tumblr.com/" target="_blank">art sideblog</a> ☆
+				<a href="https://letterboxd.com/Iakitu/">letterboxd</a> ☆
+				<a href="https://bsky.app/profile/doqmeat.com">bluesky</a> ☆
+				<a href="https://www.last.fm/user/lakiitu">last.fm</a> ☆
+				<a href="https://rateyourmusic.com/~doqmeat">rateyourmusic</a> ☆
+				<a href="https://archive.org/details/@doqmeat" target="_blank">archive.org</a> ☆
+				<a href="https://ko-fi.com/doqmeat">ko-fi</a>
+
+				<h3>contact me</h3>
+				<p><a href="mailto:&#x6d;&#x65;&#x6f;&#x77;&commat;&#x64;&#x6f;&#x71;&#x6d;&#x65;&#x61;&#x74;&period;&#x63;&#x6f;&#x6d;">&#x6d;&#x65;&#x6f;&#x77;&commat;&#x64;&#x6f;&#x71;&#x6d;&#x65;&#x61;&#x74;&period;&#x63;&#x6f;&#x6d;</a></p>
+				<!--		top half end div-->
+			</div>
+
+			<!--			bottom half -->
+			<div class="down">
+				<div class="header">
+					<h2>about des</h2>
+				</div>
+				<div class="portrait">
+					<!-- portrait picture goes here! -->
+					<img src="files/cat.png" alt="portrait">
+					<div id="statuscafe">
+						<div id="statuscafe-username"></div>
+						<div id="statuscafe-content"></div>
+					</div>
+					<script src="https://status.cafe/current-status.js?name=doqmeat" defer></script>
+				</div>
+				<!-- 1st column -->
+				<div class="info1">
+					<h3>Name</h3>
+					<p>des</p>
+					<h3>Where</h3>
+					<p>puerto rico</p>
+					<h3>Age</h3>
+					<p>24</p>
+					<h3>Studying</h3>
+					<p>computer science</p>
+
+				</div>
+
+				<!-- 2nd column -->
+				<div class="info2">
+					<h3>Goals</h3>
+					<p>to have fun</p>
+					<h3>Languages</h3>
+					<p>español, english</p>
+					<h3>Likes</h3>
+					<p>cats, coding static websites, drum & bass, silly things, doodling</p>
+				</div>
+				<div class="footer">&lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo; &lsaquo;</div>
+				<!--			bottom half end div-->
+			</div>
+			<!--		page 1 end div-->
+		</div>
+
+		<!-- page 2 -->
+		<div id="page-2" class="page">
+			<!--		top half -->
+			<div class="up">
+				<h2>portfolio</h2>
+				<h3>commissions</h3>
+				<p>i highly encourage anyone to pick up HTML coding, but i've also been approached for commissions and doing them is very fun to me so here it is :] you can give me money and in exchange i will give you a hand coded HTML static website template.</p>
+				<p><b>can do:</b> static website templates, homepages, portfolios, galleries with pop-ups, various pages (at an extra price)</p>
+				<p><b>can't do</b>: any back end work, heavy JS programming (my knowlege of JS is very basic at the moment)</p>
+				<p><b>disclaimer:</b> my templates work best for people who want a very personalized look for their webpage. if you're looking for something more professional/corporate you might want to find someone else.</p>
+				<p>i do these one at a time so check availability <a href="https://ko-fi.com/doqmeat/commissions">here</a></p>
+
+				<h4>terms and conditions</h4>
+
+				<ul>
+					<li>payments are done through <a href="https://ko-fi.com/doqmeat/commissions">ko-fi</a></li>
+					<li>once you you recieve the final product, you can use it to your hearts desire without any attribution to me needed.</li>
+					<li>delivery date of source code and files should be less than 2 months depending on complexity. if i think it might take more time, i will be letting you know.</li>
+					<li>if i feel like i cannot fulfill your commission (out of my skill level, personal emergency) i will refund you completely.</li>
+				</ul>
+
+				<h4>base pricing for all templates includes...</h4>
+				<ul>
+					<li>a github repo + a demo of the site so you can see and keep track of my progress.</li>
+					<li><a href="http://manos.malihu.gr/style-my-tooltips-jquery-plugin/">customizable tooltips</a></li>
+					<li>instructions on how to install it properly on your preferred hosting provider.</li>
+					<li>responsive template to different desktop sizes.</li>
+					<li>semantic HTML tags.</li>
+					<li>helpful comments throughout files so you can know where goes what and what does what!</li>
+				</ul>
+				<p><a href="https://ko-fi.com/c/d93dc123a4" target="_blank">complex templates</a> starting @ $100 usd</p>
+				<p><a href="https://ko-fi.com/c/9d31702323" target="_blank">simple templates</a> starting @ $45 usd. responsive mobile view included in base price!</p>
+				</p>
+				<h3>examples</h3>
+				<figure><img src="files/pages/homepage-v4.jpg" width="100%">
+					<figcaption><i>doqmeat.com</i> v4 homepage, icy theme</figcaption>
+				</figure>
+				<figure><img src="files/pages/notebook.jpg" width="100%">
+					<figcaption>notebook with tabs</figcaption>
+				</figure>
+				<figure><img src="files/pages/abt.jpg" width="100%">
+					<figcaption>page with draggable and interactable windows</figcaption>
+				</figure>
+				<figure><img src="files/pages/journal.jpg" width="100%">
+					<figcaption>notepad journal with sticky notes</figcaption>
+				</figure>
+				<figure><img src="files/pages/star-comm.jpg" width="100%">
+					<figcaption>commission template for <a href="https://startastica.neocities.org/" target="_blank">startastica</a></figcaption>
+				</figure>
+
+				<!--		top half end div-->
+			</div>
+			<!--		bottom half -->
+			<div class="down">
+				<h3>footer</h3>
+				<img src="https://doqmeat.com/!g/gif/jermahell.gif" alt="jerma in hell" style="float:left;margin:10px;width:40%;">
+				<p>last updated on 20.nov.24</p>
+				<p>hand coded with love by des!</p>
+				<p>body background pic by <a href="https://unsplash.com/@mineral_of_demon?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nastia Petruk</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-tree-with-pink-flowers-7Xo13XzVOdY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
+				<p>template inspired by yukika's <b>soul lady</b> album inclusion passport.</p>
+				<!--		bottom half end div-->
+			</div>
+			<!--			page 2 end div-->
+		</div>
+		<!--		passport opened end div-->
+	</div>
+
+	<!-- nothing burger spacer at the bottom.-->
+	<div id="spacer">
+	</div>
+
+	<!-- javascript for this to even function -->
+	<script src="script.js"></script>
+</body>
+
+</html>
