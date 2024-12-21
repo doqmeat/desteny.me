@@ -10,6 +10,10 @@ body {
   line-height: 20px;
 }
 
+html {
+  scrollbar-color: rgb(223, 121, 169) rgb(55, 147, 54);
+}
+
 nav a {
   display: inline-block;
   padding: 2px 30px;
