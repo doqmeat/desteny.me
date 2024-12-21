@@ -11,7 +11,7 @@ body {
 }
 
 html {
-  scrollbar-color: rgb(223, 121, 169) rgb(55, 147, 54);
+  scrollbar-color: rgb(223, 121, 169) rgb(160, 172, 236);
 }
 
 nav a {
@@ -58,6 +58,13 @@ main {
   margin: auto;
   max-width: 900px;
   padding: 20px;
+}
+
+.img {
+  float: right;
+  margin: 10px;
+  border-radius: 20px;
+  width: 50%;
 }
 
 @font-face {
