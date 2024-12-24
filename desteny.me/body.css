@@ -49,6 +49,10 @@ a {
   color: rgb(55, 147, 54);
 }
 
+a:hover {
+  text-decoration: line-through;
+}
+
 header {
   margin-top: 10px;
   text-align: center;
