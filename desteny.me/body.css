@@ -2,37 +2,30 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--pink: #edafb8;
+	--green: #b0c4b1;
+	--choco: #483939;
+}
+
 body {
-	background: #edd3dd;
-	background: radial-gradient(
-		circle,
-		rgb(247, 221, 230) 48%,
-		rgb(207, 228, 252) 100%
+	background: rgb(176, 196, 177);
+	background: linear-gradient(
+		171deg,
+		rgb(199, 219, 200) 0%,
+		rgba(247, 225, 215, 1) 50%,
+		rgb(236, 194, 200) 100%
 	);
 	margin: 0px;
 	font-family: ds, ms pgothic;
 	font-size: 20px;
 	word-spacing: 3px;
 	line-height: 20px;
-	color: rgb(77, 56, 56);
+	color: var(--choco);
 }
 
 html {
-	scrollbar-color: rgb(223, 121, 169) rgb(160, 172, 236);
-}
-
-nav a {
-	display: inline-block;
-	padding: 2px 30px;
-	text-decoration: none;
-	border: 1px solid;
-	border-radius: 10px;
-	margin: 5px 10px;
-}
-
-nav a.active {
-	background: rgb(55, 147, 54);
-	color: white;
+	scrollbar-color: rgb(236, 187, 210) rgb(149, 167, 146);
 }
 
 h1,
@@ -43,16 +36,16 @@ h4 {
 }
 
 h1 {
-	color: rgb(112, 76, 72);
+	color: var(--choco);
 }
 
 h2 {
-	color: rgb(219, 124, 167);
+	color: var(--choco);
 }
 
 h3 {
 	text-align: center;
-	color: rgb(72, 83, 123);
+	color: var(--choco);
 }
 
 h4 {
@@ -67,11 +60,11 @@ hr {
 	border-top: 0px;
 	border-left: 0px;
 	border-right: 0px;
-	border-bottom: 3px dotted rgb(167, 156, 193);
+	border-bottom: 3px dotted var(--choco);
 }
 
 a {
-	color: rgb(29, 116, 28);
+	color: rgb(60, 90, 146);
 }
 
 a:hover {
@@ -107,14 +100,21 @@ p:hover {
 
 p:hover::before {
 	content: "➜ ";
-	color: rgb(99, 89, 112);
+	color: rgb(255, 255, 255);
 }
 
 .img {
 	float: right;
-	margin: 20px;
-	border-radius: 20px;
-	width: 30%;
+	margin: 50px 20px;
+	opacity: 0.7;
+	border-radius: 100%;
+	border: 2px dashed rgb(99, 98, 108);
+	width: 26%;
+	transition-duration: 0.4s;
+}
+
+.img:hover {
+	opacity: 1;
 }
 
 footer {
