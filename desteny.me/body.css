@@ -8,6 +8,11 @@
 	--choco: #483939;
 }
 
+::selection {
+	color: var(--pink);
+	background: var(--choco);
+}
+
 body {
 	background: rgb(176, 196, 177);
 	background: linear-gradient(
@@ -71,7 +76,7 @@ a:hover {
 	text-decoration: line-through;
 }
 
-.outlink::after {
+[href^="https"]::after {
 	content: "↗";
 	padding-left: 2px;
 	vertical-align: text-bottom;
@@ -99,8 +104,8 @@ p:hover {
 }
 
 p:hover::before {
-	content: "➜ ";
-	color: rgb(255, 255, 255);
+	content: "⋆⭒˚.⋆ ";
+	color: var(--choco);
 }
 
 .img {
