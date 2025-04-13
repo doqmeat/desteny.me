@@ -1,28 +1,28 @@
 .wrapper {
-  display: flex;
-  flex-flow: wrap;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-flow: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 .wrapper h3,
 .wrapper p {
-  margin: 8px;
+	margin: 8px;
 }
 
 .wrapper section {
-  background: rgb(246, 244, 245);
-  border-radius: 10px;
-  border: 1px dashed rgb(160, 172, 236);
-  width: 320px;
-  height: 320px;
-  padding: 20px;
-  margin: 10px 20px;
-  display: inline-block;
-  overflow: auto;
+	background: rgba(246, 244, 245, 0.686);
+	border-radius: 10px;
+	border: 1px dashed rgb(160, 172, 236);
+	width: 320px;
+	height: 320px;
+	padding: 20px;
+	margin: 10px 20px;
+	display: inline-block;
+	overflow: auto;
 }
 
 section img {
-  width: 100%;
-  border-radius: 10px;
+	width: 100%;
+	border-radius: 10px;
 }

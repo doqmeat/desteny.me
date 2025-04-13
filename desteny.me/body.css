@@ -1,99 +1,140 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0px;
-  font-family: ds, ms pgothic;
-  font-size: 20px;
-  word-spacing: 3px;
-  line-height: 20px;
+	background: #edd3dd;
+	background: radial-gradient(
+		circle,
+		rgb(247, 221, 230) 48%,
+		rgb(207, 228, 252) 100%
+	);
+	margin: 0px;
+	font-family: ds, ms pgothic;
+	font-size: 20px;
+	word-spacing: 3px;
+	line-height: 20px;
+	color: rgb(77, 56, 56);
 }
 
 html {
-  scrollbar-color: rgb(223, 121, 169) rgb(160, 172, 236);
+	scrollbar-color: rgb(223, 121, 169) rgb(160, 172, 236);
 }
 
 nav a {
-  display: inline-block;
-  padding: 2px 30px;
-  text-decoration: none;
-  border: 1px solid;
-  border-radius: 10px;
-  margin: 5px 10px;
+	display: inline-block;
+	padding: 2px 30px;
+	text-decoration: none;
+	border: 1px solid;
+	border-radius: 10px;
+	margin: 5px 10px;
 }
 
 nav a.active {
-  background: rgb(55, 147, 54);
-  color: white;
+	background: rgb(55, 147, 54);
+	color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-shadow: 2px 2px 2px white;
 }
 
 h1 {
-  line-height: 30px;
-  color: rgb(112, 76, 72);
+	color: rgb(112, 76, 72);
 }
 
 h2 {
-  color: rgb(223, 121, 169);
+	color: rgb(219, 124, 167);
 }
 
 h3 {
-  color: rgb(207, 194, 51);
+	text-align: center;
+	color: rgb(72, 83, 123);
 }
 
 h4 {
-  color: rgb(160, 172, 236);
+	color: rgb(160, 172, 236);
+}
+
+hr {
+	margin: auto;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	width: 90%;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 3px dotted rgb(167, 156, 193);
 }
 
 a {
-  color: rgb(55, 147, 54);
+	color: rgb(29, 116, 28);
 }
 
 a:hover {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .outlink::after {
-  content: "↗";
-  padding-left: 2px;
-  vertical-align: text-bottom;
+	content: "↗";
+	padding-left: 2px;
+	vertical-align: text-bottom;
 }
 
 header {
-  margin-top: 10px;
-  text-align: center;
+	margin-top: 50px;
+	text-align: center;
 }
 
 main {
-  margin: auto;
-  max-width: 900px;
-  padding: 20px;
+	margin: auto;
+	max-width: 900px;
+	padding: 20px;
+}
+
+p {
+	margin: 0px;
+	padding: 10px;
+	transition-duration: 0.5s;
+}
+
+p:hover {
+	border-radius: 10px;
+}
+
+p:hover::before {
+	content: "➜ ";
+	color: rgb(99, 89, 112);
 }
 
 .img {
-  float: right;
-  margin: 20px;
-  border-radius: 20px;
-  width: 30%;
+	float: right;
+	margin: 20px;
+	border-radius: 20px;
+	width: 30%;
 }
 
 footer {
-  margin-top: 20px;
-  text-align: center;
+	margin-top: 20px;
+	text-align: center;
+	padding: 40px 10px;
 }
 
 #s-m-t-tooltip {
-  max-width: 400px;
-  text-align: center;
-  z-index: 9999;
-  margin: 30px 15px 7px 12px;
-  padding: 5px;
-  border-radius: 5px;
-  border: 5px double black;
-  background-color: rgb(191, 199, 247);
+	max-width: 400px;
+	text-align: center;
+	z-index: 9999;
+	margin: 30px 15px 7px 12px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 5px double black;
+	background-color: rgb(191, 199, 247);
 }
 
 @font-face {
-  font-family: ds;
-  src: url(files/ds.ttf);
+	font-family: ds;
+	src: url(files/ds.ttf);
 }
