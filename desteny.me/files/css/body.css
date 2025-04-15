@@ -33,6 +33,18 @@ html {
 	scrollbar-color: rgb(236, 187, 210) rgb(149, 167, 146);
 }
 
+li {
+	list-style-type: "☆ ";
+	display: inline-block;
+
+	&::after {
+		content: " ☆ ";
+	}
+	&:last-of-type::after {
+		content: "";
+	}
+}
+
 h1,
 h2,
 h3,
@@ -70,10 +82,9 @@ hr {
 
 a {
 	color: rgb(60, 90, 146);
-}
-
-a:hover {
-	text-decoration: line-through;
+	&:hover {
+		text-decoration: line-through;
+	}
 }
 
 [href^="https"]::after {
@@ -96,16 +107,6 @@ main {
 p {
 	margin: 0px;
 	padding: 10px;
-	transition-duration: 0.5s;
-}
-
-p:hover {
-	border-radius: 10px;
-}
-
-p:hover::before {
-	content: "⋆⭒˚.⋆ ";
-	color: var(--choco);
 }
 
 .img {
@@ -116,10 +117,9 @@ p:hover::before {
 	border: 2px dashed rgb(99, 98, 108);
 	width: 26%;
 	transition-duration: 0.4s;
-}
-
-.img:hover {
-	opacity: 1;
+	&:hover {
+		opacity: 1;
+	}
 }
 
 footer {
@@ -141,5 +141,5 @@ footer {
 
 @font-face {
 	font-family: ds;
-	src: url(files/ds.ttf);
+	src: url(../ds.ttf);
 }
