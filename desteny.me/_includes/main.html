@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="files/favicon.gif">
+  <link rel="alternate" hreflang="es" href="https://desteny.me/es">
+  <title>{{ title }}</title>
+  <link href="/files/css/body.css" rel="stylesheet">
+  <link href="/files/css/projects.css" rel="stylesheet">
+  <link href="/files/css/contact.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="/files/tooltip-jquary.js"></script>
+  <script src="/files/tooltip.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>{{ title }}</h1>
+    <nav><a href="/">index</a> - <a href="/pages/projects">projects</a> - <a href="/pages/contact">contact</a></nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>coded with love by des, built with <a href="https://11ty.dev">11ty</a>. last updated on <b>{{ date-updated }}</b>.</p>
+  </footer>
+</body>
+
+</html>
