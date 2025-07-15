@@ -35,15 +35,8 @@ html {
 }
 
 li {
+	margin: 5px;
 	list-style-type: "☆ ";
-	display: inline-block;
-
-	&::after {
-		content: " ☆ ";
-	}
-	&:last-of-type::after {
-		content: "";
-	}
 }
 
 h1,
