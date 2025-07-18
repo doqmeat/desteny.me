@@ -4,7 +4,6 @@
 
 :root {
 	--pink: #edafb8;
-	--green: #b0c4b1;
 	--choco: #483939;
 }
 
@@ -14,13 +13,9 @@
 }
 
 body {
-	background: rgb(176, 196, 177);
-	background: linear-gradient(
-		171deg,
-		rgb(199, 219, 200) 0%,
-		rgba(247, 225, 215, 1) 50%,
-		rgb(236, 194, 200) 100%
-	);
+	background: url("../bg-sunset.png");
+	background-size: cover;
+	background-attachment: fixed;
 	margin: 0px;
 	font-family: ds, ms pgothic;
 	font-size: 20px;
@@ -39,19 +34,20 @@ li {
 	list-style-type: "☆ ";
 }
 
-h1,
+h1 {
+	color: #ffdf96;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+
 h2,
 h3,
 h4 {
-	text-shadow: 2px 2px 2px white;
-}
-
-h1 {
-	color: var(--choco);
+	text-shadow: 2px 2px 4px white, -2px -2px 4px white;
 }
 
 h2 {
-	color: var(--choco);
+	color: #5f5691;
 }
 
 h3 {
@@ -94,8 +90,23 @@ header {
 
 main {
 	margin: auto;
+	background: #fde3acf1;
+	border-radius: 20px;
 	max-width: 900px;
 	padding: 20px;
+	transition-duration: 0.5s;
+}
+
+main:hover {
+	background: #fde3ac;
+}
+
+nav {
+	margin-bottom: 20px;
+	color: #d9bbb5;
+	a {
+		color: inherit;
+	}
 }
 
 p {
@@ -117,9 +128,19 @@ p {
 }
 
 footer {
+	font-size: 1rem;
+	color: #b4c7da;
+	text-shadow: 2px 2px 4px black, -2px -2px 4px black;
 	margin-top: 20px;
 	text-align: center;
-	padding: 40px 10px;
+	padding: 10px;
+	a {
+		color: inherit;
+	}
+	p {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 #s-m-t-tooltip {
