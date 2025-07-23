@@ -144,8 +144,8 @@ footer {
 	margin: 30px 15px 7px 12px;
 	padding: 5px;
 	border-radius: 5px;
-	border: 5px double black;
-	background-color: rgb(191, 199, 247);
+	color: var(--dark);
+	background-color: var(--c1);
 }
 
 @font-face {
@@ -159,5 +159,11 @@ footer {
 		display: block;
 		margin: auto;
 		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	h1 {
+		line-height: 40px;
 	}
 }
