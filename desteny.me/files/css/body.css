@@ -3,17 +3,21 @@
 }
 
 :root {
-	--pink: #edafb8;
-	--choco: #483939;
+	--c1: #edafb8;
+	--c2: #80aad4;
+	--c3: #e1bb62;
+	--c4: #85c38a;
+	--c5: #ad8fbe;
+	--dark: #483939;
 }
 
 ::selection {
-	color: var(--pink);
-	background: var(--choco);
+	color: var(--c3);
+	background: var(--dark);
 }
 
 body {
-	background: url("../bg-sunset.png");
+	background: white;
 	background-size: cover;
 	background-attachment: fixed;
 	margin: 0px;
@@ -21,38 +25,35 @@ body {
 	font-size: 20px;
 	word-spacing: 3px;
 	line-height: 20px;
-	color: var(--choco);
+	color: var(--dark);
 	height: 100%;
 }
 
 html {
-	scrollbar-color: rgb(236, 187, 210) rgb(149, 167, 146);
+	scrollbar-color: var(--dark) var(--c5);
 }
 
 li {
 	margin: 5px;
 	list-style-type: "☆ ";
+	&::marker {
+		color: var(--c4);
+	}
 }
 
 h1 {
-	color: #ffdf96;
+	color: var(--c1);
 	letter-spacing: 2px;
 	font-weight: normal;
 }
 
-h2,
-h3,
-h4 {
-	text-shadow: 2px 2px 4px white, -2px -2px 4px white;
-}
-
 h2 {
-	color: #5f5691;
+	color: var(--c4);
 }
 
 h3 {
 	text-align: center;
-	color: var(--choco);
+	color: var(--c3);
 }
 
 h4 {
@@ -67,11 +68,11 @@ hr {
 	border-top: 0px;
 	border-left: 0px;
 	border-right: 0px;
-	border-bottom: 3px dotted var(--choco);
+	border-bottom: 3px dotted var(--dark);
 }
 
 a {
-	color: rgb(60, 90, 146);
+	color: var(--c2);
 	&:hover {
 		text-decoration: line-through;
 	}
@@ -90,20 +91,16 @@ header {
 
 main {
 	margin: auto;
-	background: #fde3acf1;
 	border-radius: 20px;
 	max-width: 900px;
 	padding: 20px;
 	transition-duration: 0.5s;
 }
 
-main:hover {
-	background: #fde3ac;
-}
-
 nav {
 	margin-bottom: 20px;
-	color: #d9bbb5;
+	color: var(--c5);
+
 	a {
 		color: inherit;
 	}
@@ -117,9 +114,7 @@ p {
 .img {
 	float: right;
 	margin: 50px 20px;
-	opacity: 0.7;
-	border-radius: 100%;
-	border: 2px dashed rgb(99, 98, 108);
+	opacity: 0.9;
 	width: 26%;
 	transition-duration: 0.4s;
 	&:hover {
@@ -128,12 +123,11 @@ p {
 }
 
 footer {
-	font-size: 1rem;
-	color: #b4c7da;
-	text-shadow: 2px 2px 4px black, -2px -2px 4px black;
+	font-size: 1.2rem;
+	color: var(--c5);
 	margin-top: 20px;
 	text-align: center;
-	padding: 10px;
+	padding: 20px;
 	a {
 		color: inherit;
 	}
