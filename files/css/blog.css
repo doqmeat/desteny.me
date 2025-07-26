@@ -1,0 +1,9 @@
+.log {
+	border-bottom: 2px dashed var(--c1);
+	padding-bottom: 10px;
+	p.desc {
+		margin: 0px;
+		padding: 0px;
+		text-align: center;
+	}
+}

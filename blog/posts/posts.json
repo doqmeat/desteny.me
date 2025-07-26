@@ -1,0 +1,6 @@
+{
+  "layout":"main.html",
+  "title":"blog",
+  "cssFile":"blog",
+  "tags":"posts"
+}
