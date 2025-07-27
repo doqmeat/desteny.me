@@ -158,12 +158,13 @@ footer {
 		float: none;
 		display: block;
 		margin: auto;
-		width: 50%;
+		width: 70%;
 	}
 }
 
 @media only screen and (max-width: 400px) {
 	h1 {
+		font-size: 26px;
 		line-height: 40px;
 	}
 }

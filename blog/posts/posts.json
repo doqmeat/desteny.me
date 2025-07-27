@@ -1,6 +1,5 @@
 {
-  "layout":"main.html",
-  "title":"blog",
+  "layout":"blog-post.html",
   "cssFile":"blog",
   "tags":"posts"
 }
