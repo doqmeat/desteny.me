@@ -15,6 +15,10 @@ main {
 	}
 }
 
+figure {
+	padding: 10px;
+}
+
 p#date {
 	text-align: right;
 }
