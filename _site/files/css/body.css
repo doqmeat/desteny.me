@@ -9,6 +9,7 @@
 	--c4: #85c38a;
 	--c5: #ad8fbe;
 	--dark: #483939;
+	--light: white;
 }
 
 ::selection {
@@ -17,7 +18,7 @@
 }
 
 body {
-	background: white;
+	background: var(--light);
 	background-size: cover;
 	background-attachment: fixed;
 	margin: 0px;
