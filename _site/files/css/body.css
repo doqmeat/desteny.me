@@ -2,6 +2,16 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: ds;
+	src: url(../ds.ttf);
+}
+
+@font-face {
+	font-family: mononoki;
+	src: url(../mononoki.ttf);
+}
+
 :root {
 	--c1: #edafb8;
 	--c2: #80aad4;
@@ -9,7 +19,7 @@
 	--c4: #85c38a;
 	--c5: #ad8fbe;
 	--dark: #483939;
-	--light: white;
+	--light: rgb(255, 253, 244);
 }
 
 ::selection {
@@ -18,9 +28,12 @@
 }
 
 body {
-	background: var(--light);
-	background-size: cover;
-	background-attachment: fixed;
+	background: #edf8ff;
+	background: linear-gradient(
+		3deg,
+		rgb(251, 253, 255) 0%,
+		rgba(255, 252, 242, 1) 68%
+	);
 	margin: 0px;
 	font-family: ds, ms pgothic;
 	font-size: 20px;
@@ -188,6 +201,27 @@ footer {
 	}
 }
 
+p.aecc {
+	i {
+		text-shadow: none;
+	}
+	span {
+		font-weight: bold;
+		&:nth-of-type(1) {
+			color: #e07a7a;
+		}
+		&:nth-of-type(2) {
+			color: var(--c4);
+		}
+		&:nth-of-type(3) {
+			color: var(--c2);
+		}
+		&:nth-of-type(4) {
+			color: #f397d9;
+		}
+	}
+}
+
 #s-m-t-tooltip {
 	max-width: 400px;
 	text-align: center;
@@ -197,16 +231,6 @@ footer {
 	border-radius: 5px;
 	color: var(--dark);
 	background-color: var(--c1);
-}
-
-@font-face {
-	font-family: ds;
-	src: url(../ds.ttf);
-}
-
-@font-face {
-	font-family: mononoki;
-	src: url(../mononoki.ttf);
 }
 
 @media only screen and (max-width: 700px) {
