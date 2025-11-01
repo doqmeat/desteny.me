@@ -20,8 +20,11 @@
   <header>
     <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> {{ title }} <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
   </header>
-  <nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/notes">digital notes</a> - <a href="/contact">contact</a></nav>
   <main>
+    {% if description %}
+    <p style="text-align:center">description: {{ description }}</p>
+    <hr>
+    {% endif %}
     {{ content }}
   </main>
   <footer>
@@ -34,7 +37,6 @@
     <p>published on <b>{{ date-published }}</b></p>
     {% endif %}
 
-    <p>coded with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎</p>
     <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
   </footer>
 </body>

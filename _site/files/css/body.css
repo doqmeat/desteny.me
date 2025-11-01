@@ -19,7 +19,8 @@
 	--c4: #85c38a;
 	--c5: #ad8fbe;
 	--dark: #483939;
-	--light: rgb(255, 253, 244);
+	--light: #fffdf4;
+	--bg: #fffdf8;
 }
 
 ::selection {
@@ -28,14 +29,9 @@
 }
 
 body {
-	background: #edf8ff;
-	background: linear-gradient(
-		3deg,
-		rgb(251, 253, 255) 0%,
-		rgba(255, 252, 242, 1) 68%
-	);
 	margin: 0px;
 	font-family: ds, ms pgothic;
+	background-color: var(--bg);
 	font-size: 20px;
 	word-spacing: 3px;
 	line-height: 20px;
@@ -56,13 +52,49 @@ ul li {
 	&::marker {
 		color: var(--c4);
 	}
+	ul li {
+		&::marker {
+			color: var(--c2);
+		}
+	}
 }
-
+/* make this better bruh */
 ol li {
 	list-style-type: decimal-leading-zero;
 	&::marker {
 		color: var(--c1);
 	}
+	ol li::marker {
+		color: var(--c2);
+		ul li::marker {
+			color: var(--c4);
+		}
+	}
+	ul li {
+		list-style-type: "☆ ";
+		&::marker {
+			color: var(--c3);
+		}
+		ol li::marker {
+			color: var(--c2);
+			ul li::marker {
+				color: var(--c4);
+			}
+		}
+	}
+}
+
+code {
+	font-family: mononoki;
+	font-size: 0.9rem;
+	border: 1px solid var(--dark);
+	background-color: var(--c2);
+	padding: 0px 2px;
+	color: var(--light);
+}
+
+pre code {
+	display: block;
 }
 
 h1 {
@@ -85,9 +117,7 @@ h4 {
 }
 
 hr {
-	margin: auto;
-	margin-top: 80px;
-	margin-bottom: 80px;
+	margin: 20px auto;
 	width: 90%;
 	border-top: 0px;
 	border-left: 0px;
@@ -108,9 +138,21 @@ blockquote {
 	padding-left: 20px;
 }
 
+h2,
+h3,
+h4 {
+	&::before,
+	&::after {
+		content: "✦";
+		padding: 0px 5px;
+		font-size: 0.7em;
+	}
+}
+
 mark {
 	background: var(--c3);
-	color: white;
+	color: var(--dark);
+	border-radius: 5px;
 	padding: 1px;
 }
 
@@ -153,16 +195,27 @@ header {
 	text-align: center;
 }
 
+nav {
+	z-index: 10;
+	background-color: var(--bg);
+}
+
 main {
 	margin: auto;
 	border-radius: 20px;
 	max-width: 900px;
 	padding: 20px;
 	transition-duration: 0.5s;
+	/* border: 2px dashed var(--c4); */
 }
 
 nav {
-	margin-bottom: 20px;
+	background-color: var(--bg);
+	text-align: center;
+	position: sticky;
+	top: 0px;
+	margin: auto;
+	padding: 10px 10px;
 	color: var(--c5);
 
 	a {
@@ -175,7 +228,7 @@ p {
 	padding: 10px;
 }
 
-.img {
+.homepage-img {
 	float: right;
 	margin: 50px 20px;
 	opacity: 0.8;
@@ -192,6 +245,7 @@ footer {
 	margin-top: 20px;
 	text-align: center;
 	padding: 20px;
+	border-top: 2px dashed var(--c3);
 	a {
 		color: inherit;
 	}
@@ -231,10 +285,11 @@ p.aecc {
 	border-radius: 5px;
 	color: var(--dark);
 	background-color: var(--c1);
+	border: 2px solid var(--dark);
 }
 
 @media only screen and (max-width: 700px) {
-	.img {
+	.homepage-img {
 		float: none;
 		display: block;
 		margin: auto;

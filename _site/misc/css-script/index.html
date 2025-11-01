@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/files/favicon.gif">
+  <title>css script</title>
+  <link href="/files/css/body.css?0727" rel="stylesheet">
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="/files/tooltip-jquary.js"></script>
+  <script src="/files/tooltip.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> css script <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
+  </header>
+  <main>
+    
+    <p style="text-align:center">description: the script i made for my CSS workshop on october 2025, it's all written in spanish.</p>
+    <hr>
+    
+    <h2>introducción</h2>
+<ol>
+<li>instrucciones
+<ul>
+<li>pueden usar editores online</li>
+</ul>
+</li>
+<li>CAMBIOS al HTML original
+<ul>
+<li>sacar el <code>h1</code> del header</li>
+<li>wrap el contenido en <code>main</code></li>
+</ul>
+</li>
+<li>explicar por encima datos del taller HTML:
+<ul>
+<li>definiciones: HTML, <strong>CSS</strong>, JS</li>
+</ul>
+</li>
+<li>crear documento <code>style.css</code>
+<ul>
+<li>se le añade un color background a <code>body</code></li>
+<li>explicar términos y sintaxis: <em>css block</em>, <em>property</em>, <em>value</em>, <em>selector</em></li>
+</ul>
+</li>
+<li>añadirlo al HTML <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;awesome.css&quot;&gt;</code></li>
+<li>explicar <em>inline</em> vs <em>internal</em> vs <em>external</em></li>
+</ol>
+<h2>CSS</h2>
+<ol>
+<li><strong>background</strong> - <code>body</code></li>
+</ol>
+<ul>
+<li>explicar el uso de <code>background</code> shorthand vs usar todas las propiedades</li>
+</ul>
+<pre><code class="language-CSS">body{
+  background-color:brown;
+  background-image: url(assets/bg.png), url(assets/pattern.gif);
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+</code></pre>
+<ol start="2">
+<li><strong>box-model - (<code>header, main, footer</code>)</strong></li>
+</ol>
+<ul>
+<li>se añade un <code>border</code> y un <code>max-width</code> (se explica pq es mejor que just width)</li>
+<li>introducir <strong>inspector</strong></li>
+<li><code>box model</code> : <em>padding</em>, <em>margin</em></li>
+<li>si le di un width de x pixeles, de donde vienen esos pixeles extra??
+<ul>
+<li><em>centralizar los elementos</em>
+<ul>
+<li><code>margin: auto</code></li>
+<li>explicar maneras de como ponerle valores a propiedades como <code>margin</code> y <code>width</code></li>
+<li>de una vez centralizar el <code>h1</code> con <code>text-align</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-CSS">	header, main, footer {
+	border-radius:10px;
+	max-width: 700px;
+	margin: 20px auto;
+	padding: 20px;
+	border: 2px dashed var(--red);
+	overflow: auto;
+	}
+</code></pre>
+<ol start="3">
+<li>
+<p><strong>position</strong> - los diferentes positions que puede tener un elemento: relative, absolute, fixed, sticky con <code>h1</code></p>
+</li>
+<li>
+<p><strong>font color</strong></p>
+<ul>
+<li>se le añade <code>color</code> al body font.</li>
+<li>pero yo no quiero repetir valores!!!! se introduce el pseudo-clase de <code>:root</code> , <em>variables globales</em> , y la función de <code>var()</code></li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-CSS">:root{
+  --dark: #481c31;
+  --light: #f9e8cf;
+  --peach: #d1a99a;
+  --red: #8e2335;
+  --green: #4d4828;
+  }
+</code></pre>
+<ol start="4">
+<li><strong>font family</strong>
+<ul>
+<li>cambiar font: <em>font-family</em>
+<ul>
+<li>introducir que no todos los fonts son compatibles con todos los dispositivos / OS : <em>ms pgothic</em>, por eso de fallback tenemos a <em>arial</em></li>
+</ul>
+</li>
+<li>añadimos nuestros fonts con <code>@font-face</code>
+<ul>
+<li>mostrar que pasa si <em>blotter</em> de momento no funciona en h1, por eso es bueno tener nuestros fonts en una variable</li>
+</ul>
+</li>
+<li>se muestra que podemos cambiar el estilo de un font utilizando <em>font-style</em> y <em>font-weight</em> <strong>cambiamos al elemento dt</strong></li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-CSS">@font-face {
+  font-family: romance;
+  src: url(fonts/RomanceA.ttf);
+}
+
+@font-face {
+  font-family: blotter;
+  src: url(fonts/blotter.otf);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: blotter, var(--fonts);
+}
+</code></pre>
+<ol start="6">
+<li><strong>a/link - pseudo-classes: :hover</strong>
+<ul>
+<li>se le pone un mejor color</li>
+<li>introducimos <em>nested CSS</em> con <code>:hover</code></li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-CSS">a {
+  color: var(--dark);
+  &amp;:hover {
+    text-decoration: line-through;
+  }
+}
+</code></pre>
+<ol start="7">
+<li><strong>pseudo-classes :nth-of-type, :first-of-type, .classes (a)</strong></li>
+</ol>
+<pre><code class="language-CSS">table {
+  tr {
+     &amp;:nth-of-type(2n) {
+      background: var(--peach);
+      color: var(--green);
+    }
+    &amp;:nth-of-type(2n+1) {
+      background: var(--peach);
+      color: var(--red);
+    }
+    &amp;:first-of-type {
+      background: var(--green);
+      color: var(--light);
+    }
+    &amp;.info {
+      background: var(--red);
+      color: var(--light);
+    }
+  }
+}
+</code></pre>
+<ol start="6">
+<li><strong>pseudo-elements ::marker - (details)</strong>
+<ul>
+<li>enseñar el <code>::marker</code> del <code>summary</code> mediante el <em>inspector</em></li>
+<li>cambiar el <code>::marker</code> original y cuando habre!</li>
+<li>también se puede cambiar el <code>::marker</code> de las listas!</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-CSS">details {
+  cursor: help;
+  summary::marker {
+    content: &quot;~&quot;;
+  }
+ 
+  &amp;[open] summary::marker {
+    content: &quot;+&quot;;
+  }
+}
+</code></pre>
+<ol start="7">
+<li><strong>pseudo-elements ::before, ::after - (h1)</strong>
+<ul>
+<li><em>content</em> tambien se puede utilizar con imgs utilizando <em>url()</em>!</li>
+<li>y presentamos como le podemos añadirle <em>shadow</em> al texto con <em>text-shadow</em></li>
+<li>pero yo tambien quiero que los gatitos tengan un shadow!!!!!</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-CSS">h1 {
+  text-align: center;
+  text-shadow: -1.5px -1.5px 1px white, 1.5px 1.5px 1px white;
+  filter: drop-shadow(5px 5px 1px rgb(37, 22, 22));
+
+  &amp;::before {
+    content: url(assets/left-cat.gif);
+    padding-right: 10px;
+  }
+  &amp;::after {
+    content: url(assets/right-cat.gif);
+    padding-left: 10px;
+  }
+}
+</code></pre>
+<ol start="8">
+<li><strong>box-shadow - (header, main, footer)</strong>
+<ul>
+<li>hablando de shadows.... se introduce el <em>box-shadow</em></li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-CSS">header, main, footer{
+  box-shadow: inset 5px 5px 5px var(--peach), inset -5px -5px 5px var(--peach);
+}
+</code></pre>
+<ol start="9">
+<li><strong>layouts - # ID, grid layout</strong>
+<ul>
+<li>lo único que nos falta es que nuestra página tenga un layout!</li>
+<li>mencionar a <em>flex</em>, but fuck <em>flex</em> vamos a estar usando <em>grid</em></li>
+<li>para eso necesitamos editar el html para crear un <em>div#wrapper</em>!</li>
+<li>--- se le quita el max-width a los boxes</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-CSS">#wrapper {
+  display: grid;
+  margin: auto;
+  grid-template-areas:
+    &quot;h1 h1&quot;
+    &quot;header main&quot;
+    &quot;footer footer&quot;;
+  grid-template-columns: 1fr 2fr;
+  max-width: 900px;
+  gap: 20px;
+}
+</code></pre>
+<ol start="10">
+<li><strong>responsive - @media rule</strong></li>
+</ol>
+<ul>
+<li>this looks so ugly si se fuera a ver en un celular though....</li>
+<li>para eso está el <em>@media rule</em></li>
+<li>se cambia a que el wrapper tenga un display de <code>block</code> y le ponemos detalles</li>
+</ul>
+<pre><code class="language-CSS">@media screen and (max-width: 500px) {
+  #wrapper {
+    display: block;
+    gap: 0;
+  }
+
+  header,
+  main,
+  footer {
+    margin: 20px 10px;
+  }
+}
+</code></pre>
+<h3>extra</h3>
+<ul>
+<li><code>@keyframes</code></li>
+<li>center something vertically</li>
+<li><code>@import</code> rule</li>
+</ul>
+
+  </main>
+  <footer>
+    <!-- same for here!-->
+    
+
+    
+    <p>published on <b>01.nov.25</b></p>
+    
+
+    <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
+  </footer>
+</body>
+
+</html>
