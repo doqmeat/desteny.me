@@ -1,0 +1,47 @@
+main {
+	max-width: 700px;
+}
+.log {
+	padding-bottom: 10px;
+
+	&:has(+ &) {
+		/* no le da un borde al último */
+		border-bottom: 5px double var(--c2);
+		padding-bottom: 25px;
+	}
+	h3 {
+		text-align: center;
+		margin: 15px 5px;
+	}
+	p.desc {
+		margin: 0px;
+		padding: 0px;
+		text-align: center;
+	}
+}
+
+figure {
+	padding: 10px;
+}
+
+p#date {
+	text-align: right;
+}
+
+h3 {
+	text-align: left;
+}
+
+img.right,
+img.left {
+	max-width: 100%;
+	margin: 10px;
+}
+
+img.left {
+	float: left;
+}
+
+img.right {
+	float: right;
+}

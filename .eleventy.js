@@ -1,15 +1,9 @@
-module.exports = function (eleventyConfig) {
-	eleventyConfig.setServerPassthroughCopyBehavior("copy");
-	eleventyConfig.addPassthroughCopy("files");
-};
-
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
-	eleventyConfig.addPlugin(pluginRss);
-};
-
-module.exports = function (eleventyConfig) {
+	eleventyConfig.setServerPassthroughCopyBehavior("copy");
+	eleventyConfig.addPassthroughCopy("files");
+	// RSS
 	eleventyConfig.addPlugin(pluginRss, {
 		type: "rss", // or "rss", "json"
 		outputPath: "/feed.xml",

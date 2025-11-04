@@ -1,0 +1,36 @@
+main {
+	max-width: 500px;
+}
+
+form {
+	margin: auto;
+	width: 90%;
+}
+
+textarea#message,
+form input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	border: 1px dashed rgb(223, 121, 169);
+	border-radius: 20px;
+	padding: 10px;
+	margin: 5px;
+}
+
+#name {
+	width: 40%;
+}
+
+#email {
+	width: 40%;
+}
+
+#submit {
+	background: rgb(221, 224, 240);
+	cursor: pointer;
+}
+
+textarea#message {
+	width: 100%;
+}
