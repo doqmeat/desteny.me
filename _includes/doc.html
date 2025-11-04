@@ -18,7 +18,7 @@
 
 <body>
   <header>
-    <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> {{ title }} <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
+    <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> {% if tags contains "cv" %} Desteny Hernández De Juan {% else %} {{ title }} {% endif %} <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
   </header>
   <main>
     {% if description %}
@@ -27,6 +27,7 @@
     {% endif %}
     {{ content }}
   </main>
+
   <footer>
     <!-- same for here!-->
     {% if date-updated %}
@@ -37,7 +38,7 @@
     <p>published on <b>{{ date-published }}</b></p>
     {% endif %}
 
-    <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
+    <p><a href="javascript:history.back()">go back?</a></p>
   </footer>
 </body>
 

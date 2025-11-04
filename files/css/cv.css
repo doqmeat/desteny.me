@@ -1,0 +1,22 @@
+body {
+	font-family: arial;
+	font-size: 16px;
+	word-spacing: normal;
+	letter-spacing: normal;
+}
+
+h3 {
+	text-align: left;
+}
+
+h3,
+h4 {
+	&::before,
+	&::after {
+		content: none;
+	}
+}
+
+footer {
+	font-size: 0.8rem;
+}

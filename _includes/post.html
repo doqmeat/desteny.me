@@ -1,5 +1,46 @@
----
-layout: main.html
----
+<!DOCTYPE html>
+<html lang="en">
 
-{{ content }}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/files/favicon.gif">
+  <title>{{ title }}</title>
+  <link href="/files/css/body.css?0727" rel="stylesheet">
+
+  {% if cssFile %}
+  <link href="/files/css/{{ cssFile }}.css?0727" rel="stylesheet">
+  {% endif %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="/files/tooltip-jquary.js"></script>
+  <script src="/files/tooltip.js"></script>
+</head>
+
+<body>
+  <nav><a href="/">home</a> &gt; <a href="/notes">digital notes</a> &gt; {{ title }}</nav>
+  <header>
+    <!-- if tags posts ?? -->
+
+    <h1>{{ title }}</h1>
+  </header>
+  <main>
+    <hr>
+    <p style="text-align: right;">published on <b>{{ date-published }}</b></p>
+    {{ content }}
+  </main>
+  <footer>
+    <!-- same for here!-->
+    {% if date-updated %}
+    <p>last updated on <b>{{ date-updated }}</b></p>
+    {% endif %}
+
+    {% if date-published %}
+    <p>published on <b>{{ date-published }}</b></p>
+    {% endif %}
+
+    <p>written with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎ reach me via e-mail: info@desteny.me </p>
+    <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
+  </footer>
+</body>
+
+</html>
