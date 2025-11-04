@@ -22,7 +22,7 @@ function switchFont(font) {
 
 function checkFont() {
 	if (localStorage.getItem("fontName") == null) {
-		localStorage.setItem("fontName", "ms pgothic");
+		localStorage.setItem("fontName", "ds");
 	} else {
 		fontSelect.value = localStorage.getItem("fontName");
 		switchFont(localStorage.getItem("fontName"));
