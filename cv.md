@@ -1,10 +1,12 @@
 ---
-layout: doc.html
+layout: plain.html
 title: CV
 cssFile: cv
 date-updated: 14.jul.25
 tags: ["subpage", "cv"]
 ---
+
+# Desteny Hernández De Juan
 
 ## Overview
 
@@ -27,8 +29,6 @@ Interested in Full Stack Web Development with experience in Front End and Web De
   - Received Francis Castro scholarship - Scholar Compass UPRRP program.
   - Board member and active participant of AECC (Asociación Estudiantil de Ciencias de Cómputos).
   - Helped with redesigning website, gave a CSS workshop to other students.
-
-#### May 2018
 
 ## Projects
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/files/favicon.gif">
   <title>desteny.me</title>
-  <link href="/files/css/body.css?0727" rel="stylesheet">
+  <link href="/files/css/body.css" rel="stylesheet">
 
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -15,22 +15,22 @@
 </head>
 
 <body>
+  <!-- nav bar for blog posts -->
   
   <header>
     
     <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> desteny.me <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
     
   </header>
-  <nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/notes">digital notes</a> - <a href="/contact">contact</a></nav> 
+  <nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/posts">writings</a> - <a href="/contact">contact</a></nav> 
   <main>
     
     <img title="creature feature" src="files/creature.png" class="homepage-img" alt="drawing of a multi colored cat sleeping">
 <h2>info</h2>
 <p>Hi! i'm <b>Desteny</b> (b. 2000, Puerto Rico), you can also call me <i>des</i> (he/she) ^_^</p>
 <p>I'm a <i>Web Development</i> and <i>Web Design</i> enthusiast studying Computer Science @ University of Puerto Rico, Río Piedras.</p>
-<p class="aecc">Board member and active participant of <i><span>A</span>sociación <span>E</span>studiantil de <span>C</span>iencias de <span>C</span>ómputos</i> - AECC<span title="translation: my university's Computer Science Student Organization">*</span></p>
-<p>I've always loved creating things. Making hand-coded websites with HTML/CSS/JS is my latest obsession. <small>and i love it very much ヾ(＠⌒ー⌒＠)ノ</small> <br>i am currently learning frameworks such as React.</p>
-<p>Currently available for any interships or work! Anything related to web development is preferrable. My email is open for any questions!</p>
+<p>I really enjoy making hand-coded websites with HTML/CSS/JS. <br><small>ヾ(＠⌒ー⌒＠)ノ</small> <br> i am currently learning frameworks such as React and want to learn how to set up a dynamic website with backend!</p>
+<p>Currently available for any interships, work, and commissions! Anything related to web development is preferrable. My email is open for any questions!</p>
 
 <h3>publications</h3>
 <p><i>(2024)</i> Maren Bell, <a href="https://coldcuts.neocities.org/writing1" target="_blank">Hello, World (Wide Web)!</a></p>
@@ -50,9 +50,16 @@
 
     
 
-    <p> written  with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎  </p>
+    <p> written  with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎ - <a href="/rss.xml">RSS feed</a>  </p>
+    <label for="fonts">pick a font:</label>
+    <select name="fonts" id="font-picker">
+      <option value="ms pgothic" onclick="switchFont('ms pgothic')">MS pgothic</option>
+      <option value="ds" onclick="switchFont('ds')">nintendo DS BIOS</option>
+      <option value="arial" onclick="switchFont('arial')">arial</option>
+    </select>
     <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
   </footer>
+  <script src="/files/font-picker.js"></script>
 </body>
 
 </html>

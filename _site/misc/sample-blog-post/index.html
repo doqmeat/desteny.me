@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/files/favicon.gif">
   <title>example post</title>
-  <link href="/files/css/body.css?0727" rel="stylesheet">
+  <link href="/files/css/body.css" rel="stylesheet">
 
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -15,13 +15,14 @@
 </head>
 
 <body>
+  <!-- nav bar for blog posts -->
   
   <header>
     
     <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> example post <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
     
   </header>
-  <nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/notes">digital notes</a> - <a href="/contact">contact</a></nav> 
+  <nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/posts">writings</a> - <a href="/contact">contact</a></nav> 
   <main>
     
     
@@ -72,9 +73,16 @@
     <p>published on <b>25.jul.25</b></p>
     
 
-    <p> written  with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎  </p>
+    <p> written  with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎ - <a href="/rss.xml">RSS feed</a>  </p>
+    <label for="fonts">pick a font:</label>
+    <select name="fonts" id="font-picker">
+      <option value="ms pgothic" onclick="switchFont('ms pgothic')">MS pgothic</option>
+      <option value="ds" onclick="switchFont('ds')">nintendo DS BIOS</option>
+      <option value="arial" onclick="switchFont('arial')">arial</option>
+    </select>
     <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
   </footer>
+  <script src="/files/font-picker.js"></script>
 </body>
 
 </html>

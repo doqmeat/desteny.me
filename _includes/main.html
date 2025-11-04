@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/files/favicon.gif">
   <title>{{ title }}</title>
-  <link href="/files/css/body.css?0727" rel="stylesheet">
+  <link href="/files/css/body.css" rel="stylesheet">
 
   {% if cssFile %}
-  <link href="/files/css/{{ cssFile }}.css?0727" rel="stylesheet">
+  <link href="/files/css/{{ cssFile }}.css" rel="stylesheet">
   {% endif %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script src="/files/tooltip-jquary.js"></script>
@@ -17,13 +17,14 @@
 </head>
 
 <body>
-  {% if tags contains "posts" %} <nav><a href="/">home</a> &gt; <a href="/notes">digital notes</a> &gt; {{ title }}</nav> {% endif %}
+  <!-- nav bar for blog posts -->
+  {% if tags contains "posts" %} <nav><a href="/">home</a> &gt; <a href="/posts">writings</a> &gt; {{ title }}</nav> {% endif %}
   <header>
     {% if tags contains "posts" %} <h1>{{ title }}</h1> {% else %}
     <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> {{ title }} <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
     {% endif %}
   </header>
-  {% unless tags contains "posts" %}<nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/notes">digital notes</a> - <a href="/contact">contact</a></nav> {% endunless %}
+  {% unless tags contains "posts" %}<nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/posts">writings</a> - <a href="/contact">contact</a></nav> {% endunless %}
   <main>
     {% if tags contains "posts" %}
     <hr>
@@ -40,9 +41,16 @@
     <p>published on <b>{{ date-published }}</b></p>
     {% endif %}
 
-    <p>{% if tags contains "posts" or "misc" %} written {% else %} coded {% endif %} with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎ {% if tags contains "posts" %} reach me via e-mail: info@desteny.me {% endif %} </p>
+    <p>{% if tags contains "posts" or "misc" %} written {% else %} coded {% endif %} with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎ - <a href="/rss.xml">RSS feed</a> {% if tags contains "posts" %} reach me via e-mail: info@desteny.me {% endif %} </p>
+    <label for="fonts">pick a font:</label>
+    <select name="fonts" id="font-picker">
+      <option value="ms pgothic" onclick="switchFont('ms pgothic')">MS pgothic</option>
+      <option value="ds" onclick="switchFont('ds')">nintendo DS BIOS</option>
+      <option value="arial" onclick="switchFont('arial')">arial</option>
+    </select>
     <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
   </footer>
+  <script src="/files/font-picker.js"></script>
 </body>
 
 </html>

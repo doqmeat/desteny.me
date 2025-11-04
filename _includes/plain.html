@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/files/favicon.gif">
+  <title>{{ title }}</title>
+  <link href="/files/css/body.css" rel="stylesheet">
+
+  {% if cssFile %}
+  <link href="/files/css/{{ cssFile }}.css" rel="stylesheet">
+  {% endif %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="/files/tooltip-jquary.js"></script>
+  <script src="/files/tooltip.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> {% if tags contains "cv" %} Curriculum Vitae {% else %} {{ title }} {% endif %} <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
+  </header>
+  <main>
+    {% if description %}
+    <p style="text-align:center">description: {{ description }}</p>
+    <hr>
+    {% endif %}
+    {{ content }}
+  </main>
+
+  <footer>
+    {% if date-updated %}
+    <p>last updated on <b>{{ date-updated }}</b></p>
+    {% endif %}
+
+    {% if date-published %}
+    <p>published on <b>{{ date-published }}</b></p>
+    {% endif %}
+    <label for="fonts">pick a font:</label>
+    <select name="fonts" id="font-picker">
+      <option onclick="switchFont('ms pgothic')">MS pgothic</option>
+      <option onclick="switchFont('ds')">nintendo DS BIOS</option>
+      <option onclick="switchFont('arial')">arial</option>
+    </select>
+    <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
+    <script src="/files/font-picker.js"></script>
+  </footer>
+</body>
+
+</html>

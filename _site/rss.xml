@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://desteny.me/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>desteny&#39;s RSS feed</title>
+    <link>https://desteny.me/</link>
+    <atom:link href="https://desteny.me/rss.xml" rel="self" type="application/rss+xml" />
+    <description>writings about my academic journey and personal growth.</description>
+    <language>en</language>
+    <item>
+      <title>giving my first workshop</title>
+      <link>https://desteny.me/posts/css-workshop/</link>
+      <description>&lt;p&gt;This august semester i ended up being part of my university&#39;s student association of computer science aka &lt;b&gt;AECC&lt;/b&gt;. you can learn more about them &lt;a href=&quot;https://www.instagram.com/aecc.rp/&quot;&gt;here&lt;/a&gt; but at the time of typing this, that site is very outdated (i&#39;m working on giving it a new look!). Being part of this association has honestly been so much fun for me. It has also brought me closer to the Computer Science community of my university which means i have been talking to so so so many people. i feel like i have been opening up to others way more easily.&lt;/p&gt;
+
+&lt;h2&gt;working on my public speaking skills&lt;/h2&gt;
+&lt;p&gt;if there is something i wish i could change about myself, it would probably be to no longer be scared of public speaking. but at the end of the day this is something i need to work on if i want to feel less &lt;i&gt;anxious&lt;/i&gt; when talking in public during presentations and such.&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;during the month of october i had 2 talks:&lt;/mark&gt; 1 for my seminar about George Boole (lowkey my goat, i love &lt;code&gt;if&lt;/code&gt; statements), and another one for a &lt;b&gt;CSS workshop&lt;/b&gt;!&lt;/p&gt;
+&lt;p&gt;for the seminar presentation, while OF COURSE i was pretty nervous, i also felt confident in the information that i had up in my head. prior experiences with presentations, i usually learn the script for them Fully and end up reciting the entire thing by memory. the problem with this approach is that i end up sounding very monotone at times and it makes it hard for me to flow naturally as i speak. i decided to not do that this time which did help me become more relax in what i was saying though some times i would still have to stop for a second and think how i wanted to phrase what i was about to say. overall...&lt;/p&gt;
+&lt;h3&gt;i think i have done some improvements when it comes to public speaking&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;make my voice not break in the middle of me talking&lt;/li&gt;
+  &lt;li&gt;because i&#39;ve become less nervous&lt;/li&gt;
+  &lt;li&gt;sounding more natural, with a ver flow&lt;/li&gt;
+  &lt;li&gt;making more eye contact with the public! (i am so bad at this)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;my CSS workshop&lt;/h2&gt;
+&lt;p&gt;at the end of september i agreed to give a CSS (!!!) workshop. i thought this would be a very nice experience trying to teach something that i am very passionate about to other students. but i was also very very &lt;i&gt;nervous&lt;/i&gt; about it! but it was definetly something i was willing to do! &lt;b&gt;i need to do more things that i am afraid of&lt;/b&gt; and i thought this was the perfect chance for that.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;https://desteny.me/files/imgs/css-poster.png&quot; alt=&quot;CSS poster i made for the event&quot;&gt;
+  &lt;figcaption&gt;poster i made to announce the event!&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;i wrote an &lt;a href=&quot;https://desteny.me/misc/css-script&quot; target=&quot;_blank&quot;&gt;outline&lt;/a&gt; with everything that i wanted to show to people that had never touched CSS. beforehand, i had asked people on &lt;a href=&quot;https://neocities.org/site/doqmeat?event_id=5666830&quot; target=&quot;_blank&quot;&gt;neocitied&lt;/a&gt; what they would have liked to know beforehand about CSS. my workshop ended up having around 20 people which was so insane to me. &lt;small&gt;it turns out a professor told his classroom to go to the workshop...&lt;/small&gt; i felt a tiny bit nervous but at least my chest wasn&#39;t hurting like other times because i forget how to breathe. at the end i was able to confidently do my workshop! something out of my control was that the room i was presenting had a damaged projector, i&#39;m not sure what happened to it but the colors were inverted. i didn&#39;t mind this so much but it was a bit of a shame since the colors of what i was doing showed up very messed up. but not even taking this minor inconvenience into consideration: something i completely forgot about while prepering for my workshop was &lt;b&gt;the time it would take me to do everything in my outline script&lt;/b&gt;.&lt;/p&gt;
+
+&lt;p&gt;i had not put it in practice how long teaching and explaining all of this would take me considering people would also be asking for questions. so i ended up missing a few things from my outline so i could properly explain everything i was doing, i didnt want to fly through everything either. i asked people afterwards if they learned anything about CSS and they did! even people there who already knew about CSS leanrned new things about it too! as a first experience i do think i did nicely but there were things i noticed that i needed to improve on.&lt;/p&gt;
+&lt;h3&gt;for next time&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;split the workshop into 2 or 3 seperate workshops so i can have more time to comfortably explain everything. this also gives more time for people to take breaks and ask me questions. i would probably seperate them into...&lt;ol&gt;
+      &lt;li&gt;CSS syntax and basic information&lt;/li&gt;
+      &lt;li&gt;pseudo elements, pseudo classes, complex selectors&lt;/li&gt;
+      &lt;li&gt;grid, flexbox, responsiveness&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;despite now being okay at eye contact, i noticed that i wasn&#39;t looking a lot at my audience. to be fair the things that i was explaining required me to point and look at the screen. but it&#39;s still something i don&#39;t want to do a lot people tend to raise their arms for questions and such and if they did i wouldn&#39;t have seen them.&lt;/li&gt;
+  &lt;li&gt;give my workshop in a room where the projector properly works&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;overall it was a very nice experience. i might have ended the workshop a bit rushed trying to show everyone the magical world of CSS layouts. i did uploaded everything to the github &lt;a href=&quot;https://github.com/doqmeat/css-taller&quot; target=&quot;_blank&quot;&gt;repository&lt;/a&gt; for others to see once the workshop was done though. i even invited my girlfriend to come to the workshop so she could see me doing this thing that i was so scared and excited to do... when i saw her in the back of the room i felt very at ease and i smiled very softly. i hope to do something like this again.&lt;/p&gt;</description>
+      <pubDate>Fri, 31 Oct 2025 20:00:00 GMT</pubDate>
+      <dc:creator>des</dc:creator>
+      <guid>https://desteny.me/posts/css-workshop/</guid>
+    </item>
+  </channel>
+</rss>

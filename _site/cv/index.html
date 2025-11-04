@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/files/favicon.gif">
   <title>CV</title>
-  <link href="/files/css/body.css?0727" rel="stylesheet">
+  <link href="/files/css/body.css" rel="stylesheet">
 
   
-  <link href="/files/css/cv.css?0727" rel="stylesheet">
+  <link href="/files/css/cv.css" rel="stylesheet">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script src="/files/tooltip-jquary.js"></script>
@@ -18,11 +18,12 @@
 
 <body>
   <header>
-    <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span>  Desteny Hernández De Juan  <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
+    <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span>  Curriculum Vitae  <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
   </header>
   <main>
     
-    <h2>Overview</h2>
+    <h1>Desteny Hernández De Juan</h1>
+<h2>Overview</h2>
 <p>2nd year Computer Science student from University of Puerto Rico, Río Piedras campus.</p>
 <p>Interested in Full Stack Web Development with experience in Front End and Web Design.</p>
 <h2>Education</h2>
@@ -45,7 +46,6 @@
 </ul>
 </li>
 </ul>
-<h4>May 2018</h4>
 <h2>Projects</h2>
 <p>All projects available on <a href="https://github.com/doqmeat">github</a></p>
 <h3><a href="https://doqmeat.com">doqmeat.com</a> - <em>personal static website</em></h3>
@@ -72,14 +72,19 @@
   </main>
 
   <footer>
-    <!-- same for here!-->
     
     <p>last updated on <b>14.jul.25</b></p>
     
 
     
-
-    <p><a href="javascript:history.back()">go back?</a></p>
+    <label for="fonts">pick a font:</label>
+    <select name="fonts" id="font-picker">
+      <option onclick="switchFont('ms pgothic')">MS pgothic</option>
+      <option onclick="switchFont('ds')">nintendo DS BIOS</option>
+      <option onclick="switchFont('arial')">arial</option>
+    </select>
+    <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
+    <script src="/files/font-picker.js"></script>
   </footer>
 </body>
 

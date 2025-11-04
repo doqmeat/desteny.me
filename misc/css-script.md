@@ -1,7 +1,6 @@
 ---
 title: css script
-layout: doc.html
-date: last modified
+layout: plain.html
 description: the script i made for my CSS workshop on october 2025, it's all written in spanish.
 date-published: 01.nov.25
 ---

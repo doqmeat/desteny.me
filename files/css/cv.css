@@ -1,6 +1,6 @@
 body {
 	font-family: arial;
-	font-size: 16px;
+	font-size: 0.9rem;
 	word-spacing: normal;
 	letter-spacing: normal;
 }
@@ -15,8 +15,4 @@ h4 {
 	&::after {
 		content: none;
 	}
-}
-
-footer {
-	font-size: 0.8rem;
 }
