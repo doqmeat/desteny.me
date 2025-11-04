@@ -17,12 +17,17 @@
 </head>
 
 <body>
+  {% if tags contains "posts" %} <nav><a href="/">home</a> &gt; <a href="/notes">digital notes</a> &gt; {{ title }}</nav> {% endif %}
   <header>
-    <!-- if tags posts ?? -->
+    {% if tags contains "posts" %} <h1>{{ title }}</h1> {% else %}
     <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> {{ title }} <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
+    {% endif %}
   </header>
-  <nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/notes">digital notes</a> - <a href="/contact">contact</a></nav>
+  {% unless tags contains "posts" %}<nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/notes">digital notes</a> - <a href="/contact">contact</a></nav> {% endunless %}
   <main>
+    {% if tags contains "posts" %}
+    <hr>
+    <p style="text-align: right;">published on <b>{{ date-published }}</b></p> {% endif %}
     {{ content }}
   </main>
   <footer>
@@ -35,7 +40,7 @@
     <p>published on <b>{{ date-published }}</b></p>
     {% endif %}
 
-    <p>coded with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎</p>
+    <p>{% if tags contains "posts" or "misc" %} written {% else %} coded {% endif %} with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎ {% if tags contains "posts" %} reach me via e-mail: info@desteny.me {% endif %} </p>
     <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
   </footer>
 </body>
