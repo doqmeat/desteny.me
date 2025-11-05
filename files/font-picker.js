@@ -4,7 +4,7 @@ const fontSelect = document.querySelector("#font-picker");
 checkFont();
 
 function switchFont(font) {
-	bodyDoc.style.fontFamily = font;
+	bodyDoc.style.fontFamily = font + ", var(--fonts)";
 	localStorage.setItem("fontName", font);
 	switch (font) {
 		case "ds":

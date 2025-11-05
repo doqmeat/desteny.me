@@ -4,7 +4,7 @@ const fontSelect = document.querySelector("#font-picker");
 checkFont();
 
 function switchFont(font) {
-	bodyDoc.style.fontFamily = font;
+	bodyDoc.style.fontFamily = font + ", var(--fonts)";
 	localStorage.setItem("fontName", font);
 	switch (font) {
 		case "ds":
@@ -22,7 +22,7 @@ function switchFont(font) {
 
 function checkFont() {
 	if (localStorage.getItem("fontName") == null) {
-		localStorage.setItem("fontName", "ms pgothic");
+		localStorage.setItem("fontName", "ds");
 	} else {
 		fontSelect.value = localStorage.getItem("fontName");
 		switchFont(localStorage.getItem("fontName"));

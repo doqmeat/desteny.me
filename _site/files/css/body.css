@@ -21,6 +21,7 @@
 	--dark: #483939;
 	--light: #fffdf4;
 	--bg: #f9f7f3;
+	--fonts: ds, ms pgothic, arial;
 	/* fonts.... */
 }
 
@@ -263,6 +264,10 @@ select#font-picker {
 	color: var(--dark);
 	border: 1px solid var(--c5);
 	border-radius: 5px;
+	option {
+		font-size: 0.8rem;
+		font-family: inherit;
+	}
 }
 
 p.aecc {
