@@ -3,6 +3,8 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setServerPassthroughCopyBehavior("copy");
 	eleventyConfig.addPassthroughCopy("files");
+	// This will stop the default behaviour of foo.html being turned into foo/index.html
+	eleventyConfig.addGlobalData("permalink", "{{ page.filePathStem }}.html");
 	// RSS
 	eleventyConfig.addPlugin(pluginRss, {
 		type: "rss", // or "rss", "json"
