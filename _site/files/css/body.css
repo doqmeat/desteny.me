@@ -4,12 +4,17 @@
 
 @font-face {
 	font-family: ds;
-	src: url(../ds.ttf);
+	src: url(../fonts/ds.ttf);
 }
 
 @font-face {
 	font-family: mononoki;
-	src: url(../mononoki.ttf);
+	src: url(../fonts/mononoki.ttf);
+}
+
+@font-face {
+	font-family: dot gothic;
+	src: url(../fonts/DotGothic16-Regular.ttf);
 }
 
 :root {

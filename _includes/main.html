@@ -24,7 +24,7 @@
     <h1><span style="color:var(--c3)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c5)">⋯</span> {{ title }} <span style="color:var(--c5)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c3)">✦</span></h1>
     {% endif %}
   </header>
-  {% unless tags contains "posts" %}<nav><a href="/">index</a> - <a href="/projects">projects</a> - <a href="/posts">writings</a> - <a href="/contact">contact</a></nav> {% endunless %}
+  {% unless tags contains "posts" %}<nav><a href="/">index</a> - <a href="/works">works</a> - <a href="/posts">writings</a> - <a href="/contact">contact</a></nav> {% endunless %}
   <main>
     {% if tags contains "posts" %}
     <hr>
@@ -43,9 +43,9 @@
     <p>{% if tags contains "posts" or tags contains "docs" %} written {% else %} coded {% endif %} with -`♡´- by des ₊˚⊹♡ ᓚ₍ ^. .^₎ - <a href="/rss.xml"><img src="/files/rss.png" alt="RSS icon link" width="15px"></a> {% if tags contains "posts" %} - reach me via e-mail: info@desteny.me {% endif %} </p>
     <label for="fonts">pick a font:</label>
     <select name="fonts" id="font-picker">
-      <option value="ms pgothic" onclick="switchFont('ms pgothic')">MS pgothic</option>
-      <option value="ds" onclick="switchFont('ds')">nintendo DS BIOS</option>
-      <option value="arial" onclick="switchFont('arial')">arial</option>
+      <option value="ds" onclick="switchFont('ds')">Nintendo DS BIOS</option>
+      <option value="dot gothic" onclick="switchFont('dot gothic')">DotGothic16</option>
+      <option value="arial" onclick="switchFont('arial')">Arial</option>
     </select>
     <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
   </footer>
