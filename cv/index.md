@@ -2,7 +2,6 @@
 layout: plain.html
 title: CV
 cssFile: cv
-date-updated: 14.jul.25
 tags: ["subpage", "cv"]
 ---
 
@@ -24,7 +23,7 @@ Interested in Full Stack Web Development with experience in Front End and Web De
   - Introduction to Computer Science
   - Introduction to Programming
   - Data Structures
-- **GPA:** 3.75
+- **GPA:** 3.76
 - **Achievements:**
   - Received Francis Castro scholarship - Scholar Compass UPRRP program.
   - Board member and active participant of AECC (Asociación Estudiantil de Ciencias de Cómputos).

@@ -18,6 +18,9 @@ function switchFont(font) {
 		case "arial":
 			bodyDoc.style.fontSize = "1em";
 			bodyDoc.style.wordSpacing = "0px";
+		case "mononoki":
+			bodyDoc.style.fontSize = "1em";
+			bodyDoc.style.wordSpacing = "0px";
 		default:
 			break;
 	}

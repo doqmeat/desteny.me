@@ -18,14 +18,14 @@
 }
 
 :root {
-	--c1: #edafb8;
-	--c2: #80aad4;
-	--c3: #e1bb62;
-	--c4: #85c38a;
-	--c5: #ad8fbe;
-	--dark: #483939;
-	--light: #fffdf4;
-	--bg: #f9f7f3;
+	--c1: #6c464fff;
+	--c2: #9e768fff;
+	--c3: #9fa4c4ff;
+	--c4: #b3cdd1ff;
+	--c5: #b3b379;
+	--dark: #5d3d44;
+	--light: rgba(253, 254, 237, 0.837);
+	--lightv2: rgba(239, 240, 202, 0.453);
 	--fonts: ds, ms pgothic, arial;
 	/* fonts.... */
 }
@@ -36,10 +36,15 @@
 }
 
 body {
+	background-image: url(/_files/imgs/assets/bg.png);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
 	margin: 0px;
-	font-family: ds, ms pgothic;
+	font-family: var(--fonts);
 	background-color: var(--bg);
 	font-size: 20px;
+	word-break: keep-all;
 	word-spacing: 3px;
 	line-height: 20px;
 	color: var(--dark);
@@ -51,6 +56,7 @@ html {
 }
 
 li {
+	list-style-position: inside;
 	margin: 5px;
 }
 
@@ -105,6 +111,10 @@ pre code {
 }
 
 h1 {
+	filter: drop-shadow(1px 1px 2px var(--lightv2))
+		drop-shadow(1px 1px 2px var(--lightv2))
+		drop-shadow(-1px -1px 2px var(--lightv2))
+		drop-shadow(-1px -1px 2px var(--lightv2));
 	color: var(--c1);
 	letter-spacing: 2px;
 	font-weight: normal;
@@ -115,7 +125,6 @@ h2 {
 }
 
 h3 {
-	text-align: center;
 	color: var(--c3);
 }
 
@@ -202,22 +211,20 @@ header {
 	text-align: center;
 }
 
-nav {
-	z-index: 10;
-	background-color: var(--bg);
-}
-
 main {
-	margin: auto;
+	display: flow-root;
+	background: var(--light);
+	margin: 10px auto;
 	border-radius: 20px;
-	max-width: 900px;
+	max-width: 800px;
 	padding: 20px;
 	transition-duration: 0.5s;
-	/* border: 2px dashed var(--c4); */
+	border: 2px solid var(--c2);
 }
 
 nav {
-	background-color: var(--bg);
+	display: block;
+	z-index: 10;
 	text-align: center;
 	position: sticky;
 	top: 0px;
@@ -226,7 +233,60 @@ nav {
 	color: var(--c5);
 
 	a {
-		color: inherit;
+		position: relative;
+		display: block-inline;
+		color: #d4d4b1;
+		background: var(--c2);
+		padding: 5px 9px;
+		text-decoration: none;
+		border-radius: 15px;
+
+		&:hover {
+			text-decoration: none;
+			animation-name: nav-ani-in;
+			animation-direction: normal;
+			animation-iteration-count: initial;
+			animation-fill-mode: forwards;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-in-out;
+		}
+
+		&:not(:hover) {
+			animation-name: nav-ani-out;
+			animation-iteration-count: initial;
+			animation-fill-mode: forwards;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-in-out;
+		}
+	}
+}
+@keyframes nav-load {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes nav-ani-out {
+	0% {
+		background: var(--c1);
+		top: -5px;
+	}
+	100% {
+		background: var(--c2);
+		top: 0px;
+	}
+}
+
+@keyframes nav-ani-in {
+	0% {
+		background: var(--c2);
+		top: 0px;
+	}
+	100% {
+		background: var(--c1);
+		top: -5px;
 	}
 }
 
@@ -237,9 +297,24 @@ p {
 
 .homepage-img {
 	float: right;
-	margin: 50px 20px;
-	opacity: 0.8;
-	width: 32%;
+	opacity: 0.97;
+	width: 46%;
+	shape-outside: url(/_files/imgs/assets/me.png);
+	shape-margin: 5px;
+	margin-right: -70px;
+	transition-duration: 0.4s;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.homepage-img-alt {
+	display: none;
+	float: left;
+	opacity: 0.97;
+	width: 30%;
+	shape-outside: url(/_files/imgs/assets/creature.png);
+	shape-margin: 8px;
 	transition-duration: 0.4s;
 	&:hover {
 		opacity: 1;
@@ -247,12 +322,13 @@ p {
 }
 
 footer {
+	filter: drop-shadow(1px 1px 1px var(--c1)) drop-shadow(1px 1px 1px var(--c1))
+		drop-shadow(-1px -1px 1px var(--c1)) drop-shadow(-1px -1px 1px var(--c1));
+	color: #e2e6ff;
 	font-size: 0.9em;
-	color: var(--c5);
 	margin-top: 20px;
 	text-align: center;
 	padding: 20px;
-	border-top: 2px dashed var(--c3);
 	a {
 		color: inherit;
 	}
@@ -263,7 +339,7 @@ footer {
 }
 
 select#font-picker {
-	background: var(--c1);
+	background: var(--light);
 	font-family: inherit;
 	font-size: inherit;
 	color: var(--dark);
@@ -272,27 +348,6 @@ select#font-picker {
 	option {
 		font-size: 0.8rem;
 		font-family: inherit;
-	}
-}
-
-p.aecc {
-	i {
-		text-shadow: none;
-	}
-	span {
-		font-weight: bold;
-		&:nth-of-type(1) {
-			color: #e07a7a;
-		}
-		&:nth-of-type(2) {
-			color: var(--c4);
-		}
-		&:nth-of-type(3) {
-			color: var(--c2);
-		}
-		&:nth-of-type(4) {
-			color: #f397d9;
-		}
 	}
 }
 

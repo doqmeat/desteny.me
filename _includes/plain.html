@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="{{ eleventy.generator }}">
-  <link rel="icon" type="image/x-icon" href="/files/favicon.gif">
+  <link rel="icon" type="image/x-icon" href="/_files/favicon.gif">
   <title>{{ title }}</title>
-  <link href="/files/css/body.css" rel="stylesheet">
+  <link href="/_files/css/body.css" rel="stylesheet">
 
   {% if cssFile %}
-  <link href="/files/css/{{ cssFile }}.css" rel="stylesheet">
+  <link href="/_files/css/{{ cssFile }}.css" rel="stylesheet">
   {% endif %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-  <script src="/files/tooltip-jquary.js"></script>
-  <script src="/files/tooltip.js"></script>
+  <script src="/_files/tooltip-jquary.js"></script>
+  <script src="/_files/tooltip.js"></script>
 </head>
 
 <body>
@@ -30,9 +30,7 @@
   </main>
 
   <footer>
-    {% if date-updated %}
     <p>last updated on <b>{{ date-updated }}</b></p>
-    {% endif %}
 
     {% if date-published %}
     <p>published on <b>{{ date-published }}</b></p>
@@ -44,7 +42,7 @@
       <option value="arial" onclick="switchFont('arial')">Arial</option>
     </select>
     <p><a href="#">go to the top?</a> / <a href="javascript:history.back()">go back?</a></p>
-    <script src="/files/font-picker.js"></script>
+    <script src="/_files/font-picker.js"></script>
   </footer>
 </body>
 
