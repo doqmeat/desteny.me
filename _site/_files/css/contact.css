@@ -2,35 +2,16 @@ main {
 	max-width: 500px;
 }
 
-form {
-	margin: auto;
-	width: 90%;
+img.cat {
+	float: left;
+	margin: 10px;
 }
 
-textarea#message,
-form input {
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
-	border: 1px dashed rgb(223, 121, 169);
-	border-radius: 20px;
-	padding: 10px;
-	margin: 5px;
-}
-
-#name {
-	width: 40%;
-}
-
-#email {
-	width: 40%;
-}
-
-#submit {
-	background: rgb(221, 224, 240);
-	cursor: pointer;
-}
-
-textarea#message {
-	width: 100%;
+@media only screen and (max-width: 400px) {
+	img.cat {
+		float: none;
+		width: 80%;
+		display: block;
+		margin: auto;
+	}
 }
