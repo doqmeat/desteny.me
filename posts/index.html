@@ -9,8 +9,10 @@ tags: ["subpage"]
 <p>about my academic experience, projects, etc. <small>=￣ω￣=</small></p>
 
 {% for posts in collections.posts reversed %}
+{% unless posts.data.tags contains "subpage" %}
 <div class="log">
   <h3><a href="{{ posts.url }}">{{ posts.data.title }}</a> - <span class="date">{{ posts.data.date-published }}</span></h3>
   <p class="desc">{{ posts.data.description }}</p>
 </div>
+{% endunless %}
 {% endfor %}
