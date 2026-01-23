@@ -61,4 +61,8 @@ section.main-projects {
 	.wrapper section {
 		width: 100%;
 	}
+
+	section.main-projects {
+		margin: 5px;
+	}
 }
