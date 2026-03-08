@@ -6,13 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Eleventy v3.1.2">
   <link rel="icon" type="image/x-icon" href="/_files/favicon.gif">
-  <title>404</title>
+  <title>search</title>
   <link href="/_files/css/body.css" rel="stylesheet">
   <!-- pagefind -->
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script src="/pagefind/pagefind-ui.js"></script>
-  
-  <link href="/_files/css/not-found.css" rel="stylesheet">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script src="/_files/tooltip-jquary.js"></script>
@@ -22,30 +20,23 @@
 <body>
   <header>
     
-    <h1><span style="color:var(--c5)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">⋯</span> 404 <span style="color:var(--c4)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c5)">✦</span></h1>
+    <h1><span style="color:var(--c5)">✦</span><span style="color:var(--c4)">•</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">⋯</span> search <span style="color:var(--c4)">⋯</span><span style="color:var(--c2)">๑</span><span style="color:var(--c4)">•</span><span style="color:var(--c5)">✦</span></h1>
     
   </header>
-  
+  <nav><a href="/">index</a> <a href="/works">works</a> <a href="/posts">writings</a> <a href="/info">info</a> <a href="/search">search</a></nav> 
   <main>
     
-    <h2>what you were looking for couldn't be found...</h2>
-<pre>
-  ,-.       _,---._ __  / \
- /  )    .-'       `./ /   \
-(  (   ,'            `/    /|
- \  `-"             \'\   / |
-  `.              ,  \ \ /  |
-   /`.          ,'-`----Y   |
-  (            ;        |   '
-  |  ,-.    ,-'         |  /
-  |  | (   |        hjw | /
-  )  |  \  `.___________|/
-  `--'   `--'
-</pre>
-<p><a href="https://www.asciiart.eu/animals/cats" target="_blank">ascii art credit</a></p>
+    <h2>search</h2>
+
+<div id="search"></div>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
   </main>
   <footer>
-    <p>last updated on <b>29.Jul.25</b></p>
+    <p>last updated on <b>08.Mar.26</b></p>
     
     <br>
     <p> coded  with -`♡´- by des ₊˚⊹ ᓚ₍ ^. .^₎ - <a href="/rss.xml">RSS</a>  </p>
