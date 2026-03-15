@@ -309,30 +309,13 @@ footer {
 		padding: 3px;
 	}
 }
-
-select#font-picker {
-	background: var(--light);
-	font-family: inherit;
-	font-size: inherit;
-	color: var(--dark);
-	border: 1px solid var(--c5);
-	border-radius: 5px;
-	option {
-		font-size: 0.8rem;
-		font-family: inherit;
-	}
+.tippy-box[data-theme~="des"] {
+	background-color: var(--c1);
+	color: var(--light);
 }
 
-#s-m-t-tooltip {
-	max-width: 400px;
-	text-align: center;
-	z-index: 9999;
-	margin: 30px 15px 7px 12px;
-	padding: 5px;
-	border-radius: 5px;
-	color: var(--dark);
-	background-color: var(--c4);
-	border: 2px solid var(--dark);
+.tippy-box[data-theme~="des"][data-placement^="top"] > .tippy-arrow::before {
+	color: var(--c1);
 }
 
 @media only screen and (max-width: 700px) {
