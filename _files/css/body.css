@@ -309,6 +309,8 @@ footer {
 		padding: 3px;
 	}
 }
+/* tooptip CSS */
+
 .tippy-box[data-theme~="des"] {
 	background-color: var(--c1);
 	color: var(--light);
