@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
 	eleventyConfig.addPassthroughCopy("_files");
+	eleventyConfig.addPassthroughCopy("other");
 
 	// This will stop the default behaviour of foo.html being turned into foo/index.html
 	eleventyConfig.addGlobalData("permalink", "{{ page.filePathStem }}.html");
